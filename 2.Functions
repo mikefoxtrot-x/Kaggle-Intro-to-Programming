@@ -1,0 +1,62 @@
+	Question #01:
+
+Write a function.
+To predict Prices of a house.
+Use info like no. of bedrooms & bathrooms.
+
+Answer:
+def get_expected_cost(beds,baths):
+	value = 80000 + (beds*30000) + (baths*10000)	
+	return value
+
+	Question #02:
+
+Calculate price based on following options
+1. Beds = 2, baths = 3
+2. Beds = 3, baths = 2
+3. Beds = 3, baths = 3
+4. Beds = 3, baths = 4
+Calculate price of each option
+
+Answer:
+option_one = 80000 + (2*30000) + (3*10000)
+option_two = 80000 + (3*30000) + (2*10000)
+option_three = 80000 + (3*30000) + (3*10000)
+option_four = 80000 + (3*30000) + (4*10000)
+
+print(option_one)
+print(option_two)
+print(option_three)
+print(option_four)
+
+	Question #03:
+
+Calculate cost of painting room, create function
+input arguments: sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon
+find total sqft to be painted
+divide it by no. of gallons per sqft
+multiply this by cost per gallon
+
+Answer:
+total_sqft = sqft_walls + sqft_ceiling
+gallons_needed = total_sqft / sqft_per_gallon
+cost = cost_per_gallon * gallons_needed
+
+	Question #04:
+Call the previously created function and put the input arguments
+
+Answer:
+
+project_cost = get_cost(432,144,400,15)
+
+	Question #05:
+
+find commercial unit instead of fraction of gallons
+use math.ceil() to find up integer
+
+Answer:
+total_sqft = sqft_walls + sqft_ceiling
+gallons_needed = total_sqft / sqft_per_gallon
+rounded_gallons = math.ceil(gallons_needed)
+cost = cost_per_gallon * rounded_gallons
+return cost
